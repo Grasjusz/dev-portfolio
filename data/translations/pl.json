@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Aleksander Kowalski — Software Developer",
+    "description": "Software developer specjalizujący się w automatyce przemysłowej, systemach backendowych i frontendzie. Kraków, Polska."
+  },
+  "nav": {
+    "experience": "Doświadczenie",
+    "skills": "Umiejętności",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "whoami",
+    "title": "Software Developer",
+    "description": "Buduję systemy od podstaw po wdrożenie — od oprogramowania automatyki połączonego ze sterownikami PLC, przez API backendowe, po interfejsy na wierzchu. Zależy mi na kodzie, który ma sens jeszcze za rok.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "download": "Pobierz CV",
+    "downloading": "Przygotowywanie PDF…",
+    "available": "Dostępny do współpracy"
+  },
+  "experience": {
+    "heading": "Doświadczenie",
+    "subheading": "Trzy etapy, jeden wątek: oprogramowanie, które rozmawia z realnym światem.",
+    "items": {
+      "embedded-automation": {
+        "role": "Software Developer — Embedded / Automatyka",
+        "description": "Tworzę oprogramowanie sterujące i monitorujące dla linii automatyki przemysłowej, integrując sterowniki PLC przez Modbus TCP z warstwą usługową w Pythonie i C++. Odpowiadam za pipeline CI/CD, który wdraża aktualizacje bez przestojów na hali produkcyjnej."
+      },
+      "freelance-web": {
+        "role": "Freelance Web Developer",
+        "description": "Dostarczałem strony i narzędzia wewnętrzne dla małych firm — od realizacji na WordPressie po autorskie backendy w PHP/MySQL. Zajmowałem się całością: od ustaleń z klientem po wdrożenie na serwerze i konfigurację Nginx."
+      },
+      "frontend-developer": {
+        "role": "Frontend Developer",
+        "description": "Budowałem i utrzymywałem interfejsy React dla studia produktowego, przekładając projekty z Figmy na dostępne, przetestowane komponenty. Wprowadziłem współdzieloną bibliotekę komponentów, która wyraźnie skróciła czas budowy nowych funkcji."
+      }
+    }
+  },
+  "skills": {
+    "heading": "Umiejętności",
+    "subheading": "Narzędzia, po które sięgam, pogrupowane według miejsca w stacku.",
+    "groups": {
+      "languages": "Języki",
+      "backend": "Backend",
+      "frontend": "Frontend / CMS",
+      "infrastructure": "Infrastruktura",
+      "security": "Bezpieczeństwo"
+    }
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "subheading": "Otwarty na nowe role i ciekawe problemy do rozwiązania.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "location": "Lokalizacja"
+  },
+  "footer": {
+    "text": "Zbudowane w czystym HTML, CSS i JavaScript — bez frameworka, bez build stepu."
+  },
+  "print": {
+    "generatedFrom": "Wygenerowano z"
+  }
+}

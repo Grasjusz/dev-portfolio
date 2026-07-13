@@ -1,0 +1,23 @@
+[
+  {
+    "id": "embedded-automation",
+    "company": "Nexora Automation",
+    "companyUrl": "https://example.com/nexora",
+    "period": "2023 — Present",
+    "tags": ["C++", "Python", "Modbus TCP", "PLC", "Linux", "Docker", "CI/CD"]
+  },
+  {
+    "id": "freelance-web",
+    "company": "Self-employed",
+    "companyUrl": "",
+    "period": "2021 — 2023",
+    "tags": ["JavaScript", "PHP", "WordPress", "MySQL", "REST API", "Nginx"]
+  },
+  {
+    "id": "frontend-developer",
+    "company": "Pixelworks Studio",
+    "companyUrl": "https://example.com/pixelworks",
+    "period": "2019 — 2021",
+    "tags": ["React", "TypeScript", "Sass", "Webpack", "Figma", "Jest"]
+  }
+]

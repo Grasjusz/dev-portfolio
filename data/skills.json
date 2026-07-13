@@ -1,0 +1,22 @@
+[
+  {
+    "id": "languages",
+    "items": ["JavaScript", "TypeScript", "Python", "C++", "PHP", "SQL", "Bash"]
+  },
+  {
+    "id": "backend",
+    "items": ["Node.js", "Express", "REST API", "MySQL", "PostgreSQL", "Modbus TCP", "WebSockets"]
+  },
+  {
+    "id": "frontend",
+    "items": ["React", "HTML5", "CSS3", "Sass", "WordPress", "Webpack", "Vite"]
+  },
+  {
+    "id": "infrastructure",
+    "items": ["Docker", "Linux", "Nginx", "Git", "GitHub Actions", "CI/CD"]
+  },
+  {
+    "id": "security",
+    "items": ["OWASP Top 10", "JWT / OAuth2", "TLS", "Network Hardening", "Input Validation"]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "Aleksander Kowalski",
+  "initials": "AK",
+  "role": "software-developer",
+  "email": "aleksander.kowalski@example.com",
+  "location": "Kraków, Poland",
+  "github": {
+    "label": "aleksanderkowalski",
+    "url": "https://github.com/aleksanderkowalski"
+  },
+  "linkedin": {
+    "label": "aleksander-kowalski",
+    "url": "https://linkedin.com/in/aleksander-kowalski"
+  },
+  "available": true,
+  "resumeFileName": "Aleksander_Kowalski_CV.pdf"
+}

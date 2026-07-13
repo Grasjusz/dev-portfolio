@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Aleksander Kowalski — Software Developer",
+    "description": "Software developer focused on embedded automation, backend systems and frontend engineering. Based in Kraków, Poland."
+  },
+  "nav": {
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "whoami",
+    "title": "Software Developer",
+    "description": "I build reliable systems end to end — from PLC-connected automation software to backend APIs and the interfaces on top. I care about code that still makes sense in a year.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "download": "Download CV",
+    "downloading": "Preparing PDF…",
+    "available": "Available for work"
+  },
+  "experience": {
+    "heading": "Experience",
+    "subheading": "Three stops, one thread: making software that talks to the real world.",
+    "items": {
+      "embedded-automation": {
+        "role": "Software Developer — Embedded / Automation",
+        "description": "Write control and monitoring software for industrial automation lines, integrating PLCs over Modbus TCP with a Python/C++ service layer. Own the CI/CD pipeline that ships firmware-adjacent updates without downtime on the shop floor."
+      },
+      "freelance-web": {
+        "role": "Freelance Web Developer",
+        "description": "Delivered full-stack websites and internal tools for small businesses, from WordPress builds to custom PHP/MySQL backends. Handled everything from client scoping to server deployment and Nginx configuration."
+      },
+      "frontend-developer": {
+        "role": "Frontend Developer",
+        "description": "Built and maintained React interfaces for a product studio, translating Figma designs into accessible, tested components. Introduced a shared component library that cut new-feature build time noticeably."
+      }
+    }
+  },
+  "skills": {
+    "heading": "Skills",
+    "subheading": "Tools I reach for, grouped by where they live in the stack.",
+    "groups": {
+      "languages": "Languages",
+      "backend": "Backend",
+      "frontend": "Frontend / CMS",
+      "infrastructure": "Infrastructure",
+      "security": "Security"
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "subheading": "Open to new roles and interesting problems.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "location": "Location"
+  },
+  "footer": {
+    "text": "Built with plain HTML, CSS & JavaScript — no framework, no build step."
+  },
+  "print": {
+    "generatedFrom": "Generated from"
+  }
+}
