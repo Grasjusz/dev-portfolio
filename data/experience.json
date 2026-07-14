@@ -3,21 +3,45 @@
     "id": "embedded-automation",
     "company": "Nexora Automation",
     "companyUrl": "https://example.com/nexora",
-    "period": "2023 — Present",
+    "period": { "start": "2023-03", "end": null },
+    "role": {
+      "pl": "Software Developer — Embedded / Automatyka",
+      "en": "Software Developer — Embedded / Automation"
+    },
+    "description": {
+      "pl": "Tworzę oprogramowanie sterujące i monitorujące dla linii automatyki przemysłowej, integrując sterowniki PLC przez Modbus TCP z warstwą usługową w Pythonie i C++. Odpowiadam za pipeline CI/CD, który wdraża aktualizacje bez przestojów na hali produkcyjnej.",
+      "en": "Write control and monitoring software for industrial automation lines, integrating PLCs over Modbus TCP with a Python/C++ service layer. Own the CI/CD pipeline that ships updates without downtime on the shop floor."
+    },
     "tags": ["C++", "Python", "Modbus TCP", "PLC", "Linux", "Docker", "CI/CD"]
   },
   {
     "id": "freelance-web",
     "company": "Self-employed",
     "companyUrl": "",
-    "period": "2021 — 2023",
-    "tags": ["JavaScript", "PHP", "WordPress", "MySQL", "REST API", "Nginx"]
+    "period": { "start": "2021-06", "end": "2023-02" },
+    "role": {
+      "pl": "Freelance Web Developer",
+      "en": "Freelance Web Developer"
+    },
+    "description": {
+      "pl": "Dostarczałem strony i narzędzia wewnętrzne dla małych firm — od realizacji na WordPressie po autorskie backendy w PHP/MySQL. Zajmowałem się całością: od ustaleń z klientem po wdrożenie na serwerze i konfigurację Nginx.",
+      "en": "Delivered full-stack websites and internal tools for small businesses, from WordPress builds to custom PHP/MySQL backends. Handled everything from client scoping to server deployment and Nginx configuration."
+    },
+    "tags": ["JavaScript", "PHP", "WordPress", "WooCommerce", "MySQL", "REST API", "Nginx"]
   },
   {
     "id": "frontend-developer",
     "company": "Pixelworks Studio",
     "companyUrl": "https://example.com/pixelworks",
-    "period": "2019 — 2021",
+    "period": { "start": "2019-09", "end": "2021-05" },
+    "role": {
+      "pl": "Frontend Developer",
+      "en": "Frontend Developer"
+    },
+    "description": {
+      "pl": "Budowałem i utrzymywałem interfejsy React dla studia produktowego, przekładając projekty z Figmy na dostępne, przetestowane komponenty. Wprowadziłem współdzieloną bibliotekę komponentów, która wyraźnie skróciła czas budowy nowych funkcji.",
+      "en": "Built and maintained React interfaces for a product studio, translating Figma designs into accessible, tested components. Introduced a shared component library that noticeably cut new-feature build time."
+    },
     "tags": ["React", "TypeScript", "Sass", "Webpack", "Figma", "Jest"]
   }
 ]

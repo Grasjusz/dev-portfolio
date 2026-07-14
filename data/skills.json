@@ -1,22 +1,61 @@
 [
   {
     "id": "languages",
-    "items": ["JavaScript", "TypeScript", "Python", "C++", "PHP", "SQL", "Bash"]
+    "items": [
+      { "name": "JavaScript", "core": true },
+      { "name": "TypeScript", "core": true },
+      { "name": "Python", "core": true },
+      { "name": "C++", "core": false },
+      { "name": "PHP", "core": false },
+      { "name": "SQL", "core": true },
+      { "name": "Bash", "core": false }
+    ]
   },
   {
     "id": "backend",
-    "items": ["Node.js", "Express", "REST API", "MySQL", "PostgreSQL", "Modbus TCP", "WebSockets"]
+    "items": [
+      { "name": "Node.js", "core": true },
+      { "name": "Express", "core": false },
+      { "name": "FastAPI", "core": true },
+      { "name": "REST API", "core": true },
+      { "name": "MySQL", "core": false },
+      { "name": "PostgreSQL", "core": true },
+      { "name": "Modbus TCP", "core": false },
+      { "name": "WebSockets", "core": false }
+    ]
   },
   {
     "id": "frontend",
-    "items": ["React", "HTML5", "CSS3", "Sass", "WordPress", "Webpack", "Vite"]
+    "items": [
+      { "name": "React", "core": true },
+      { "name": "HTML5", "core": false },
+      { "name": "CSS3", "core": false },
+      { "name": "Sass", "core": false },
+      { "name": "WordPress", "core": true },
+      { "name": "WooCommerce", "core": false },
+      { "name": "Webpack", "core": false },
+      { "name": "Vite", "core": false }
+    ]
   },
   {
     "id": "infrastructure",
-    "items": ["Docker", "Linux", "Nginx", "Git", "GitHub Actions", "CI/CD"]
+    "items": [
+      { "name": "Docker", "core": true },
+      { "name": "Linux", "core": true },
+      { "name": "Nginx", "core": false },
+      { "name": "Git", "core": true },
+      { "name": "GitHub Actions", "core": false },
+      { "name": "CI/CD", "core": true }
+    ]
   },
   {
     "id": "security",
-    "items": ["OWASP Top 10", "JWT / OAuth2", "TLS", "Network Hardening", "Input Validation"]
+    "items": [
+      { "name": "OWASP Top 10", "core": true },
+      { "name": "JWT / OAuth2", "core": true },
+      { "name": "TLS", "core": false },
+      { "name": "Network Hardening", "core": false },
+      { "name": "Input Validation", "core": false }
+    ]
   }
 ]

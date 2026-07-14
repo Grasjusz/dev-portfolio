@@ -1,0 +1,23 @@
+[
+  {
+    "id": "aws-cloud-practitioner",
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "year": "2024",
+    "url": "https://aws.amazon.com/certification/"
+  },
+  {
+    "id": "comptia-security-plus",
+    "name": "CompTIA Security+",
+    "issuer": "CompTIA",
+    "year": "2023",
+    "url": "https://www.comptia.org/certifications/security"
+  },
+  {
+    "id": "python-institute-pcep",
+    "name": "PCEP — Certified Entry-Level Python Programmer",
+    "issuer": "Python Institute",
+    "year": "2021",
+    "url": "https://pythoninstitute.org/pcep"
+  }
+]

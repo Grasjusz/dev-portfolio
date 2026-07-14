@@ -1,0 +1,104 @@
+{
+  "software-developer": {
+    "order": 1,
+    "headline": { "pl": "Software Developer", "en": "Software Developer" },
+    "tagline": { "pl": "Automatyka • Backend • Web Development", "en": "Automation • Backend • Web Development" },
+    "summary": {
+      "pl": "Software Developer z doświadczeniem w automatyce przemysłowej, backendzie i frontendzie. Buduję systemy, które łączą świat fizyczny (PLC, czujniki) z warstwą usługową i interfejsem użytkownika.",
+      "en": "Software developer with experience across industrial automation, backend and frontend. I build systems that connect the physical world (PLCs, sensors) with services and user interfaces."
+    },
+    "experienceOrder": ["embedded-automation", "freelance-web", "frontend-developer"],
+    "skillsOrder": ["languages", "backend", "infrastructure", "frontend", "security"],
+    "matchedSkills": ["JavaScript", "TypeScript", "Python", "C++", "Node.js", "REST API", "Docker", "Linux", "Git", "React"],
+    "projectsOrder": ["industrial-scada", "component-library", "task-api", "ecommerce-woocommerce", "security-audit-toolkit"],
+    "keywords": {
+      "pl": ["Software Developer", "Automatyka przemysłowa", "PLC", "Python", "C++", "Backend", "React", "CI/CD", "Docker"],
+      "en": ["Software Developer", "Industrial Automation", "PLC", "Python", "C++", "Backend", "React", "CI/CD", "Docker"]
+    }
+  },
+  "python-developer": {
+    "order": 2,
+    "headline": { "pl": "Python Developer", "en": "Python Developer" },
+    "tagline": { "pl": "Automatyka • Backend • API", "en": "Automation • Backend • APIs" },
+    "summary": {
+      "pl": "Python Developer specjalizujący się w usługach backendowych i integracjach przemysłowych. Projektuję API i serwisy, które muszą działać stabilnie 24/7, oraz automatyzuję procesy od PLC po produkcję.",
+      "en": "Python developer specialising in backend services and industrial integrations. I design APIs and services that need to run reliably around the clock, and automate processes from PLCs to production."
+    },
+    "experienceOrder": ["embedded-automation", "freelance-web", "frontend-developer"],
+    "skillsOrder": ["languages", "backend", "infrastructure", "security", "frontend"],
+    "matchedSkills": ["Python", "FastAPI", "REST API", "PostgreSQL", "Docker", "Linux", "CI/CD", "Modbus TCP", "Bash"],
+    "projectsOrder": ["task-api", "industrial-scada", "security-audit-toolkit", "component-library", "ecommerce-woocommerce"],
+    "keywords": {
+      "pl": ["Python Developer", "FastAPI", "REST API", "PostgreSQL", "Docker", "Automatyka", "Modbus TCP"],
+      "en": ["Python Developer", "FastAPI", "REST API", "PostgreSQL", "Docker", "Automation", "Modbus TCP"]
+    }
+  },
+  "frontend-developer": {
+    "order": 3,
+    "headline": { "pl": "Frontend Developer", "en": "Frontend Developer" },
+    "tagline": { "pl": "React • TypeScript • UI Engineering", "en": "React • TypeScript • UI Engineering" },
+    "summary": {
+      "pl": "Frontend Developer budujący dostępne, wydajne interfejsy w React i TypeScript. Przekładam projekty z Figmy na komponenty gotowe do skalowania i dbam o spójność systemu designu.",
+      "en": "Frontend developer building accessible, performant interfaces in React and TypeScript. I translate Figma designs into scalable components and keep the design system consistent."
+    },
+    "experienceOrder": ["frontend-developer", "freelance-web", "embedded-automation"],
+    "skillsOrder": ["frontend", "languages", "backend", "infrastructure", "security"],
+    "matchedSkills": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Sass", "Webpack", "Vite", "Git"],
+    "projectsOrder": ["component-library", "ecommerce-woocommerce", "task-api", "industrial-scada", "security-audit-toolkit"],
+    "keywords": {
+      "pl": ["Frontend Developer", "React", "TypeScript", "UI", "Dostępność", "Figma", "Design System"],
+      "en": ["Frontend Developer", "React", "TypeScript", "UI Engineering", "Accessibility", "Figma", "Design System"]
+    }
+  },
+  "wordpress-developer": {
+    "order": 4,
+    "headline": { "pl": "WordPress Developer", "en": "WordPress Developer" },
+    "tagline": { "pl": "WooCommerce • PHP • Performance", "en": "WooCommerce • PHP • Performance" },
+    "summary": {
+      "pl": "WordPress Developer realizujący sklepy i strony na WooCommerce oraz autorskich motywach PHP. Optymalizuję wydajność i SEO, dbając o to, by strona klienta było łatwa w utrzymaniu.",
+      "en": "WordPress developer delivering WooCommerce stores and custom PHP themes. I optimise performance and SEO, keeping the client's site easy to maintain long-term."
+    },
+    "experienceOrder": ["freelance-web", "frontend-developer", "embedded-automation"],
+    "skillsOrder": ["frontend", "languages", "backend", "infrastructure", "security"],
+    "matchedSkills": ["WordPress", "WooCommerce", "PHP", "MySQL", "CSS3", "HTML5", "Nginx", "Git"],
+    "projectsOrder": ["ecommerce-woocommerce", "component-library", "task-api", "industrial-scada", "security-audit-toolkit"],
+    "keywords": {
+      "pl": ["WordPress Developer", "WooCommerce", "PHP", "SEO", "Performance", "MySQL"],
+      "en": ["WordPress Developer", "WooCommerce", "PHP", "SEO", "Performance", "MySQL"]
+    }
+  },
+  "backend-developer": {
+    "order": 5,
+    "headline": { "pl": "Backend Developer", "en": "Backend Developer" },
+    "tagline": { "pl": "API • Bazy danych • Infrastruktura", "en": "APIs • Databases • Infrastructure" },
+    "summary": {
+      "pl": "Backend Developer projektujący API i usługi serwerowe ze szczególnym naciskiem na niezawodność, bezpieczeństwo i utrzymanie w środowisku produkcyjnym. Buduję pipeline'y CI/CD i konteneryzuję usługi od podstaw.",
+      "en": "Backend developer designing APIs and server-side services with a strong focus on reliability, security and production maintainability. I build CI/CD pipelines and containerise services from the ground up."
+    },
+    "experienceOrder": ["embedded-automation", "freelance-web", "frontend-developer"],
+    "skillsOrder": ["backend", "languages", "infrastructure", "security", "frontend"],
+    "matchedSkills": ["Node.js", "Express", "FastAPI", "REST API", "PostgreSQL", "MySQL", "Docker", "CI/CD", "WebSockets", "Git"],
+    "projectsOrder": ["task-api", "industrial-scada", "ecommerce-woocommerce", "security-audit-toolkit", "component-library"],
+    "keywords": {
+      "pl": ["Backend Developer", "REST API", "PostgreSQL", "Docker", "CI/CD", "Node.js", "FastAPI"],
+      "en": ["Backend Developer", "REST API", "PostgreSQL", "Docker", "CI/CD", "Node.js", "FastAPI"]
+    }
+  },
+  "cybersecurity": {
+    "order": 6,
+    "headline": { "pl": "Cybersecurity Specialist", "en": "Cybersecurity Specialist" },
+    "tagline": { "pl": "Bezpieczeństwo aplikacji • Sieci • Audyt", "en": "Application Security • Networks • Auditing" },
+    "summary": {
+      "pl": "Specjalista ds. bezpieczeństwa z doświadczeniem programistycznym, łączący wiedzę o OWASP Top 10 z praktyką budowy systemów. Przeprowadzam audyty bezpieczeństwa i wdrażam praktyki hardeningu w infrastrukturze i kodzie.",
+      "en": "Security specialist with a strong development background, combining OWASP Top 10 expertise with hands-on system-building experience. I run security audits and implement hardening practices across infrastructure and code."
+    },
+    "experienceOrder": ["embedded-automation", "freelance-web", "frontend-developer"],
+    "skillsOrder": ["security", "infrastructure", "backend", "languages", "frontend"],
+    "matchedSkills": ["OWASP Top 10", "JWT / OAuth2", "TLS", "Network Hardening", "Input Validation", "Linux", "Docker", "Bash", "Git"],
+    "projectsOrder": ["security-audit-toolkit", "task-api", "industrial-scada", "component-library", "ecommerce-woocommerce"],
+    "keywords": {
+      "pl": ["Cybersecurity", "OWASP Top 10", "Audyt bezpieczeństwa", "Network Hardening", "JWT", "OAuth2"],
+      "en": ["Cybersecurity", "OWASP Top 10", "Security Audit", "Network Hardening", "JWT", "OAuth2"]
+    }
+  }
+}

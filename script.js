@@ -19,6 +19,36 @@
     translations: null,
   };
 
+  const MONTHS = {
+    pl: ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'],
+    en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  };
+
+  /**
+   * Formats a { start: "YYYY-MM", end: "YYYY-MM" | null } period into a
+   * human string. Shared globally (window.SiteUtils) so cv-builder.js can
+   * reuse the exact same formatting logic for CV documents.
+   * dateStyle: 'short' -> "sty 2023" / "Jan 2023" (PL / international feel)
+   *            'numeric' -> "03.2023" (common on PL/DE CVs)
+   */
+  function formatPeriod(period, lang, presentLabel, dateStyle = 'short') {
+    if (!period) return '';
+    const present = presentLabel || (lang === 'pl' ? 'obecnie' : 'present');
+    const fmt = (ym) => {
+      if (!ym) return present;
+      const [y, m] = ym.split('-');
+      if (dateStyle === 'numeric') return `${m}.${y}`;
+      const months = MONTHS[lang] || MONTHS.en;
+      const idx = parseInt(m, 10) - 1;
+      return `${months[idx] || m} ${y}`;
+    };
+    return `${fmt(period.start)} — ${fmt(period.end)}`;
+  }
+
+  window.SiteUtils = window.SiteUtils || {};
+  window.SiteUtils.formatPeriod = formatPeriod;
+  window.SiteUtils.escapeHTML = escapeHTML;
+
   const els = {
     body: document.body,
     themeToggle: document.getElementById('themeToggle'),
@@ -135,7 +165,6 @@
     els.experienceList.innerHTML = '';
 
     state.experience.forEach((item) => {
-      const copy = t(`experience.items.${item.id}`);
       const article = document.createElement('article');
       article.className = 'exp-card';
 
@@ -143,11 +172,13 @@
         ? `<a href="${item.companyUrl}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.company)}</a>`
         : escapeHTML(item.company);
 
+      const periodLabel = window.SiteUtils.formatPeriod(item.period, state.lang, t('common.present'));
+
       article.innerHTML = `
-        <span class="exp-period">${escapeHTML(item.period)}</span>
-        <h3 class="exp-role">${escapeHTML(copy && copy.role ? copy.role : item.id)}</h3>
+        <span class="exp-period">${escapeHTML(periodLabel)}</span>
+        <h3 class="exp-role">${escapeHTML(item.role[state.lang] || item.role.en)}</h3>
         <p class="exp-company">${companyMarkup}</p>
-        <p class="exp-description">${escapeHTML(copy && copy.description ? copy.description : '')}</p>
+        <p class="exp-description">${escapeHTML(item.description[state.lang] || item.description.en)}</p>
         <div class="exp-tags">
           ${item.tags.map((tag) => `<span class="tag">${escapeHTML(tag)}</span>`).join('')}
         </div>
@@ -169,7 +200,7 @@
       wrapper.innerHTML = `
         <h3 class="skill-group-title">${escapeHTML(label)}</h3>
         <div class="skill-tags">
-          ${group.items.map((item) => `<span class="skill-tag">${escapeHTML(item)}</span>`).join('')}
+          ${group.items.map((item) => `<span class="skill-tag">${escapeHTML(item.name)}</span>`).join('')}
         </div>
       `;
       els.skillsList.appendChild(wrapper);
@@ -202,7 +233,7 @@
       },
       {
         label: t('contact.location'),
-        value: p.location,
+        value: p.location[state.lang] || p.location.en,
         href: null,
         icon: iconPin(),
       },

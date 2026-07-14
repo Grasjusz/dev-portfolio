@@ -1,12 +1,13 @@
 {
   "meta": {
-    "title": "Aleksander Kowalski — Software Developer",
+    "title": "Gracjan Wagner — Software Developer",
     "description": "Software developer specjalizujący się w automatyce przemysłowej, systemach backendowych i frontendzie. Kraków, Polska."
   },
   "nav": {
     "experience": "Doświadczenie",
     "skills": "Umiejętności",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "downloadCv": "Download CV"
   },
   "hero": {
     "eyebrow": "whoami",
@@ -14,27 +15,12 @@
     "description": "Buduję systemy od podstaw po wdrożenie — od oprogramowania automatyki połączonego ze sterownikami PLC, przez API backendowe, po interfejsy na wierzchu. Zależy mi na kodzie, który ma sens jeszcze za rok.",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "download": "Pobierz CV",
-    "downloading": "Przygotowywanie PDF…",
+    "download": "Download CV",
     "available": "Dostępny do współpracy"
   },
   "experience": {
     "heading": "Doświadczenie",
-    "subheading": "Trzy etapy, jeden wątek: oprogramowanie, które rozmawia z realnym światem.",
-    "items": {
-      "embedded-automation": {
-        "role": "Software Developer — Embedded / Automatyka",
-        "description": "Tworzę oprogramowanie sterujące i monitorujące dla linii automatyki przemysłowej, integrując sterowniki PLC przez Modbus TCP z warstwą usługową w Pythonie i C++. Odpowiadam za pipeline CI/CD, który wdraża aktualizacje bez przestojów na hali produkcyjnej."
-      },
-      "freelance-web": {
-        "role": "Freelance Web Developer",
-        "description": "Dostarczałem strony i narzędzia wewnętrzne dla małych firm — od realizacji na WordPressie po autorskie backendy w PHP/MySQL. Zajmowałem się całością: od ustaleń z klientem po wdrożenie na serwerze i konfigurację Nginx."
-      },
-      "frontend-developer": {
-        "role": "Frontend Developer",
-        "description": "Budowałem i utrzymywałem interfejsy React dla studia produktowego, przekładając projekty z Figmy na dostępne, przetestowane komponenty. Wprowadziłem współdzieloną bibliotekę komponentów, która wyraźnie skróciła czas budowy nowych funkcji."
-      }
-    }
+    "subheading": "Trzy etapy, jeden wątek: oprogramowanie, które rozmawia z realnym światem."
   },
   "skills": {
     "heading": "Umiejętności",
@@ -53,12 +39,81 @@
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "location": "Lokalizacja"
+    "location": "Lokalizacja",
+    "phone": "Telefon",
+    "address": "Adres"
   },
   "footer": {
     "text": "Zbudowane w czystym HTML, CSS i JavaScript — bez frameworka, bez build stepu."
   },
-  "print": {
-    "generatedFrom": "Wygenerowano z"
+  "common": {
+    "present": "obecnie"
+  },
+  "cv": {
+    "modalTitle": "Generate CV",
+    "modalSubtitle": "Wybierz opcje — podgląd po prawej aktualizuje się na żywo.",
+    "close": "Zamknij",
+    "steps": {
+      "profile": "Profil CV",
+      "language": "Język",
+      "country": "Kraj",
+      "style": "Styl CV",
+      "sections": "Sekcje",
+      "contact": "Kontakt",
+      "projects": "Projekty",
+      "skills": "Umiejętności"
+    },
+    "languageOptions": { "pl": "Polski", "en": "English" },
+    "countryOptions": { "pl": "Polska", "de": "Niemcy", "intl": "International" },
+    "styleOptions": {
+      "ats": { "name": "ATS", "desc": "Maksymalna zgodność z ATS. Jedna kolumna, brak ikon, brak ozdobników." },
+      "modern": { "name": "Modern", "desc": "Lekki kolor akcentu, większe nagłówki, subtelne linie." },
+      "minimal": { "name": "Minimal", "desc": "Całkowicie czarno-białe, bardzo oszczędne." }
+    },
+    "sectionsOptions": {
+      "summary": "Podsumowanie",
+      "experience": "Doświadczenie",
+      "skills": "Umiejętności",
+      "projects": "Projekty",
+      "education": "Wykształcenie",
+      "certificates": "Certyfikaty",
+      "languages": "Języki",
+      "contact": "Kontakt"
+    },
+    "contactOptions": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "phone": "Telefon",
+      "address": "Adres"
+    },
+    "projectsOptions": {
+      "none": "Bez projektów",
+      "top3": "3 najlepsze",
+      "all": "Wszystkie"
+    },
+    "skillsOptions": {
+      "all": "Wszystkie",
+      "top": "Najważniejsze",
+      "matched": "Dopasowane do profilu"
+    },
+    "preview": {
+      "label": "Podgląd",
+      "loading": "Aktualizowanie podglądu…"
+    },
+    "generate": "Generate PDF",
+    "generating": "Generating...",
+    "downloadReady": "Pobrano!",
+    "docHeadings": {
+      "summary": "Podsumowanie zawodowe",
+      "experience": "Doświadczenie",
+      "skills": "Umiejętności",
+      "projects": "Projekty",
+      "education": "Wykształcenie",
+      "certificates": "Certyfikaty",
+      "languages": "Języki obce",
+      "keywords": "Kluczowe kompetencje",
+      "technologies": "Technologie"
+    }
   }
 }

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "industrial-scada",
+    "name": "SCADA Lite Dashboard",
+    "url": "https://github.com/gracjanwagner/scada-lite",
+    "period": { "start": "2023-06", "end": null },
+    "tags": ["Python", "Modbus TCP", "React", "PostgreSQL"],
+    "priority": 1,
+    "description": {
+      "pl": "Lekki panel SCADA do podglądu i sterowania linią produkcyjną w czasie rzeczywistym, komunikujący się ze sterownikami PLC przez Modbus TCP.",
+      "en": "A lightweight SCADA panel for real-time monitoring and control of a production line, talking to PLCs over Modbus TCP."
+    }
+  },
+  {
+    "id": "task-api",
+    "name": "Nimbus Task API",
+    "url": "https://github.com/gracjanwagner/nimbus-task-api",
+    "period": { "start": "2022-11", "end": "2023-04" },
+    "tags": ["FastAPI", "Docker", "PostgreSQL", "JWT"],
+    "priority": 2,
+    "description": {
+      "pl": "Wielodostępne REST API do zarządzania zadaniami zespołowymi, z autoryzacją JWT i konteneryzacją Docker Compose.",
+      "en": "Multi-tenant REST API for team task management, with JWT authorisation and Docker Compose containerisation."
+    }
+  },
+  {
+    "id": "ecommerce-woocommerce",
+    "name": "Atelier Store",
+    "url": "https://github.com/gracjanwagner/atelier-store",
+    "period": { "start": "2022-02", "end": "2022-09" },
+    "tags": ["WordPress", "WooCommerce", "PHP", "MySQL"],
+    "priority": 3,
+    "description": {
+      "pl": "Sklep internetowy na WooCommerce z autorskim motywem PHP, zoptymalizowany pod SEO i szybkość ładowania (LCP < 1.5s).",
+      "en": "A WooCommerce online store with a custom PHP theme, optimised for SEO and load speed (LCP under 1.5s)."
+    }
+  },
+  {
+    "id": "component-library",
+    "name": "Facet UI",
+    "url": "https://github.com/gracjanwagner/facet-ui",
+    "period": { "start": "2020-08", "end": "2021-04" },
+    "tags": ["React", "TypeScript", "Storybook"],
+    "priority": 4,
+    "description": {
+      "pl": "Współdzielona biblioteka komponentów React/TypeScript udokumentowana w Storybooku, używana w kilku projektach studia.",
+      "en": "A shared React/TypeScript component library documented in Storybook, used across several studio projects."
+    }
+  },
+  {
+    "id": "security-audit-toolkit",
+    "name": "Sentry Scan Toolkit",
+    "url": "https://github.com/gracjanwagner/sentry-scan",
+    "period": { "start": "2024-01", "end": "2024-05" },
+    "tags": ["Python", "OWASP", "Network Scanning"],
+    "priority": 5,
+    "description": {
+      "pl": "Zestaw skryptów do automatycznego skanowania podatności aplikacji webowych pod kątem OWASP Top 10 i generowania raportów.",
+      "en": "A toolkit of scripts for automated web-application vulnerability scanning against OWASP Top 10, with report generation."
+    }
+  }
+]

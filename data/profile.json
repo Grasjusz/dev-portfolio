@@ -1,17 +1,15 @@
 {
-  "name": "Aleksander Kowalski",
-  "initials": "AK",
-  "role": "software-developer",
-  "email": "aleksander.kowalski@example.com",
-  "location": "Kraków, Poland",
-  "github": {
-    "label": "aleksanderkowalski",
-    "url": "https://github.com/aleksanderkowalski"
-  },
-  "linkedin": {
-    "label": "aleksander-kowalski",
-    "url": "https://linkedin.com/in/aleksander-kowalski"
-  },
+  "name": "Gracjan Wagner",
+  "email": "gracjan.wagner@example.com",
+  "phone": "+48 512 345 678",
+  "location": { "pl": "Kraków, Polska", "en": "Kraków, Poland" },
+  "address": { "pl": "ul. Przykładowa 12/3, 30-001 Kraków", "en": "Przykładowa 12/3, 30-001 Kraków, Poland" },
+  "github": { "label": "gracjanwagner", "url": "https://github.com/gracjanwagner" },
+  "linkedin": { "label": "gracjan-wagner", "url": "https://linkedin.com/in/gracjan-wagner" },
   "available": true,
-  "resumeFileName": "Aleksander_Kowalski_CV.pdf"
+  "spokenLanguages": [
+    { "name": { "pl": "Polski", "en": "Polish" }, "level": { "pl": "Ojczysty", "en": "Native" } },
+    { "name": { "pl": "Angielski", "en": "English" }, "level": { "pl": "C1", "en": "C1" } },
+    { "name": { "pl": "Niemiecki", "en": "German" }, "level": { "pl": "B1", "en": "B1" } }
+  ]
 }
