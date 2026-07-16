@@ -540,15 +540,25 @@
     els.generateLabel.textContent = tt(uiLang, 'cv.generating');
 
     const filename = buildFilename();
+    const clone = els.renderRoot.cloneNode(true);
+    clone.className = els.renderRoot.className;
+    clone.style.width = `${A4_WIDTH}px`;
+
+    const host = document.createElement('div');
+    host.style.position = 'fixed';
+    host.style.left = '-10000px';
+    host.style.top = '0';
+    host.style.width = `${A4_WIDTH}px`;
+    host.appendChild(clone);
+    document.body.appendChild(host);
 
     try {
-      // pdf.js owns the export-only clone/offscreen-host/capture pipeline;
-      // we just hand it the live, currently-rendered document node.
-      await window.SiteUtils.generatePdf(els.renderRoot, filename, { width: A4_WIDTH });
+      await window.SiteUtils.generatePdf(clone, filename);
     } catch (err) {
       console.error('CV PDF generation failed:', err);
       window.alert('Nie udało się wygenerować PDF. Spróbuj ponownie / PDF generation failed. Please try again.');
     } finally {
+      document.body.removeChild(host);
       els.generateBtn.disabled = false;
       els.generateLabel.textContent = originalLabel;
     }
