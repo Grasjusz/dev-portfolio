@@ -17,12 +17,16 @@
  *     .cv-doc already has its own internal padding (style.css) providing
  *     the visual margin, same as the live preview — no separate PDF-level
  *     margin is needed on top of it.
- *  2. No `windowWidth` override. Confirmed open bug in html2canvas:
- *     https://github.com/niklasvh/html2canvas/issues/2947 — "html2canvas
- *     seem to ignore WindowWidth setting and scale the screenshot
- *     depending of viewport size". The captured node already has an
- *     explicit CSS width (set in cv-builder.js), which html2canvas reads
- *     correctly on its own without this option.
+ *  2. `windowWidth`/`windowHeight` matched to the captured node's own
+ *     size. Without this, html2canvas falls back to the REAL browser
+ *     viewport width. That's wide enough on desktop to not matter, but on
+ *     a phone (~375-430px) it's narrower than our fixed 794px-wide
+ *     document, so the right/left edge gets cropped — the exact bug that
+ *     showed up when testing on mobile. This is safe now (unlike earlier
+ *     attempts) because `margin: 0` above already makes html2pdf.js's own
+ *     internal container exactly 794px too, so there's no mismatch between
+ *     what html2canvas is told to render and what html2pdf actually wraps
+ *     the content in.
  *
  * Plus two low-risk, standard additions: wait for web fonts before
  * capturing, and compensate html2canvas for the page's current scroll
@@ -58,13 +62,25 @@
           scale: 2,
           useCORS: true,
           backgroundColor: '#ffffff',
+          windowWidth: node.offsetWidth || 794,
+          windowHeight: node.scrollHeight,
           scrollX: -window.scrollX,
           scrollY: -window.scrollY,
         },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
         pagebreak: {
-          mode: ['css', 'legacy'],
-          avoid: ['.cv-entry', '.cv-block'],
+          // 'css' only — mixing 'css' + 'legacy' is a documented
+          // html2pdf.js footgun: the two page-break strategies can
+          // disagree about where a block needs to move to the next page,
+          // and html2pdf inserts blank filler space to reconcile them,
+          // producing the large empty gaps seen before a section that got
+          // pushed to page 2.
+          mode: ['css'],
+          // '.cv-block' doesn't exist anywhere in style.css — it protected
+          // nothing. '.cv-section' is the real wrapper class (it already
+          // has its own `break-inside: avoid` in CSS; listing it here too
+          // makes html2pdf's own break logic agree with it explicitly).
+          avoid: ['.cv-entry', '.cv-section'],
         },
       };
 
