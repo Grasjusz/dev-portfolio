@@ -540,25 +540,26 @@
     els.generateLabel.textContent = tt(uiLang, 'cv.generating');
 
     const filename = buildFilename();
-    const clone = els.renderRoot.cloneNode(true);
-    clone.className = els.renderRoot.className;
-    clone.style.width = `${A4_WIDTH}px`;
 
-    const host = document.createElement('div');
-    host.style.position = 'fixed';
-    host.style.left = '-10000px';
-    host.style.top = '0';
-    host.style.width = `${A4_WIDTH}px`;
-    host.appendChild(clone);
-    document.body.appendChild(host);
+    // Briefly remove the live-preview scale-down transform so
+    // els.renderRoot is at its natural 794px size — html2canvas needs to
+    // capture it as designed, not shrunk for the on-screen mini preview.
+    // The preview frame's own overflow:hidden keeps this from visually
+    // spilling out of the modal during the brief moment it's unscaled.
+    const previousTransform = els.previewScaler ? els.previewScaler.style.transform : '';
+    if (els.previewScaler) {
+      els.previewScaler.style.transform = 'none';
+    }
 
     try {
-      await window.SiteUtils.generatePdf(clone, filename);
+      await window.SiteUtils.generatePdf(els.renderRoot, filename);
     } catch (err) {
       console.error('CV PDF generation failed:', err);
       window.alert('Nie udało się wygenerować PDF. Spróbuj ponownie / PDF generation failed. Please try again.');
     } finally {
-      document.body.removeChild(host);
+      if (els.previewScaler) {
+        els.previewScaler.style.transform = previousTransform;
+      }
       els.generateBtn.disabled = false;
       els.generateLabel.textContent = originalLabel;
     }
