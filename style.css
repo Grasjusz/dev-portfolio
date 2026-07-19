@@ -818,6 +818,7 @@ body.modal-open { overflow: hidden; }
 .cv-preview-frame {
   width: 100%;
   aspect-ratio: 210 / 297;
+  flex-shrink: 0;
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -848,11 +849,42 @@ body.modal-open { overflow: hidden; }
 .btn-generate:disabled { opacity: 0.65; cursor: progress; }
 
 @media (max-width: 860px) {
-  .modal-body { grid-template-columns: 1fr; overflow-y: auto; }
-  .cv-form { border-right: none; border-bottom: 1px solid var(--border-subtle); overflow-y: visible; }
+  /* Bug fix: a bare `1fr` track is shorthand for `minmax(auto, 1fr)` — it
+     is still allowed to grow past the viewport to fit the *intrinsic*
+     (content-based) width of whatever sits in that column. The desktop
+     rule above avoids this with `minmax(0, ...)` tracks, but this mobile
+     override didn't, and on mobile .cv-form and .cv-preview-col share a
+     single column (one column, two rows) instead of sitting side by side.
+     Deep inside .cv-preview-col, cv-builder.js sets `#cvPreviewScaler`
+     to a hard 794px width (full A4 @96dpi, scaled down only via CSS
+     transform — transforms don't count for intrinsic-size purposes), so
+     that 794px kept forcing the shared column — and with it the whole
+     modal, including .cv-form and its controls — to render at desktop
+     width even on a narrow phone. `minmax(0, 1fr)` clamps the track's
+     minimum to 0 so it's free to shrink to the actual viewport width. */
+  .modal-body { grid-template-columns: minmax(0, 1fr); overflow-y: auto; }
+  .cv-form { border-right: none; border-bottom: 1px solid var(--border-subtle); overflow-y: visible; min-width: 0; }
   .cv-field-row { grid-template-columns: 1fr; }
   .radio-cards-style { grid-template-columns: 1fr; }
   .modal { max-height: 94vh; }
+
+  /* Second bug fix: .cv-preview-col keeps `overflow-y: auto` + `min-height: 0`
+     from the desktop rules above. On desktop that's fine, because it sits
+     in a fixed-height grid *column* next to .cv-form. On mobile it becomes
+     a grid *row* instead (single-column layout), and browsers give grid
+     rows containing an `overflow: auto` item an automatic minimum size of
+     0 — so the row collapses to almost nothing and the whole preview
+     shows up as a tiny sliver ("zwinięte okienko"). .modal-body already
+     owns the scrolling for the whole mobile modal, so this column doesn't
+     need its own independent scroll — turn it off and give it a real
+     min-height instead, sized off the A4 aspect ratio so it never shrinks
+     below a usable preview height. `min-width: 0` is the same fix as
+     above, applied to this column too. */
+  .cv-preview-col {
+    overflow-y: visible;
+    min-height: min(80vw, 480px);
+    min-width: 0;
+  }
 }
 
 /* ==========================================================================
@@ -900,9 +932,12 @@ body.modal-open { overflow: hidden; }
 .cv-tags-plain { font-size: 8.8pt; color: #4b5563; margin-top: 4px; }
 .cv-tags-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 .cv-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   font-size: 8.2pt;
   font-family: var(--font-mono);
-  padding: 2px 7px;
+  padding: 3px 7px 2px;
   border-radius: 999px;
   border: 1px solid #cbd5e1;
   color: #334155;

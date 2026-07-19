@@ -140,6 +140,13 @@
 
     buildControls(uiLang);
     scheduleRender();
+
+    if (!els.resizeObserver && 'ResizeObserver' in window) {
+      els.resizeObserver = new ResizeObserver(() => scheduleRender());
+    }
+    if (els.resizeObserver && els.previewFrame) {
+      els.resizeObserver.observe(els.previewFrame);
+    }
     window.addEventListener('resize', scheduleRender);
     els.closeBtn.focus();
   }
@@ -149,6 +156,7 @@
     els.overlay.hidden = true;
     document.body.classList.remove('modal-open');
     window.removeEventListener('resize', scheduleRender);
+    if (els.resizeObserver) els.resizeObserver.disconnect();
   }
 
   /* ------------------------------------------------------------------ */
@@ -508,6 +516,8 @@
   /* ------------------------------------------------------------------ */
   /* Preview scaling + render pipeline                                   */
   /* ------------------------------------------------------------------ */
+  const A4_RATIO = 297 / 210; // height / width
+
   function scaleFrame() {
     if (!els.previewFrame || !els.previewScaler) return;
     const frameWidth = els.previewFrame.clientWidth;
@@ -515,6 +525,17 @@
     const scale = frameWidth / A4_WIDTH;
     els.previewScaler.style.width = `${A4_WIDTH}px`;
     els.previewScaler.style.transform = `scale(${scale})`;
+
+    // Set the frame's height explicitly from its own *measured* width
+    // instead of trusting the CSS `aspect-ratio: 210/297` declaration to
+    // resolve it. aspect-ratio is a *preferred* size — inside nested
+    // flex/grid containers (as on the mobile single-column modal layout)
+    // browsers can still resolve it to something shorter than the true
+    // ratio once other sizing rules (stretch, implicit row/track sizing,
+    // etc.) interact with it, which was silently clipping the bottom of
+    // page 1. An explicit pixel height computed from the real, current
+    // width can't be second-guessed by the layout algorithm.
+    els.previewFrame.style.height = `${Math.round(frameWidth * A4_RATIO)}px`;
   }
 
   function scheduleRender() {
